@@ -1,0 +1,33 @@
+{
+  "name": "@pipeworx/mcp-jp-mof-asset-freeze",
+  "version": "0.1.0",
+  "description": "jp-mof-asset-freeze -- Japan's asset-freeze target list, as published by the Ministry of Finance (財務省) under the Foreign Exchange and Foreign Trade Act. Keyless. Read live from the publisher per call (cached in the isolate for an hour); nothing is stored by us. The route is in the code only (CLAUDE.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "mcp-jp-mof-asset-freeze": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "jp-mof-asset-freeze"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-jp-mof-asset-freeze.git"
+  },
+  "mcpName": "io.github.pipeworx-io/jp-mof-asset-freeze",
+  "pipeworx": {
+    "mode": "gateway",
+    "slug": "jp-mof-asset-freeze",
+    "gatewaySlug": "jp-mof-asset-freeze",
+    "sourceHash": "v1-89706c5a7a4d783cb92cc484836e6f2598286ae3c2f8ea7405f550b40b81b1f2",
+    "sourceCommit": "63eb9b1fe9f3b095b65c4d9ab981248c93e13326"
+  }
+}

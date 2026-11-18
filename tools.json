@@ -1,0 +1,22 @@
+[
+  {
+    "name": "jp_asset_freeze_search",
+    "description": "Search Japan's asset-freeze target list (資産凍結等の措置の対象者) published by the Ministry of Finance under the Foreign Exchange and Foreign Trade Act: ~2,900 individuals and organisations named in Japanese or English, with aliases, former names, nationality, address, UN reference and the notice date and number. Name match is exact or partial after Unicode folding and corporate-form words (株式会社, Co., Ltd.) are dropped; a katakana spelling that differs from the ministry's (ヴ/ブ, long-vowel marks, middle dots, hiragana, or katakana against the listed English name) is returned as match variant with the listed spelling in `matched_form`; every hit is the ministry's own entry, returned unmodified. An empty `matches` with `list_size` set means the name is not on the list as published on `data_as_of`; it is not a clearance, and it does not cover other countries' lists or sanctions that are not asset freezes (use sanctions_screen for US lists). Example: name=\"Sberbank\" or \"ベラルーシ\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Person or organisation name in Japanese (katakana/kanji) or English. At least 2 characters."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum matches returned (1-50, default 10); `total_matches` always gives the full count."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+]
